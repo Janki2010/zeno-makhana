@@ -5,22 +5,22 @@ import productImage from "@/assets/product-flavors.jpg";
 const ProductShowcase = () => {
   const flavors = [
     {
-      name: "Vanilje Drøm",
-      description: "Mild og cremet vanilje smag der smelter på tungen",
+      name: "Vanilla Dream",
+      description: "Mild and creamy vanilla flavor that melts on your tongue",
       color: "from-amber-100 to-orange-50",
       textColor: "text-amber-800",
       popular: false,
     },
     {
-      name: "Chokolade Fristelse",
-      description: "Rig og dyb chokoladesmag for den søde tand",
+      name: "Chocolate Temptation",
+      description: "Rich and deep chocolate flavor for the sweet tooth",
       color: "from-orange-100 to-red-50", 
       textColor: "text-orange-800",
       popular: true,
     },
     {
-      name: "Havets Salt",
-      description: "Perfekt balance mellem salt og naturlig sødme",
+      name: "Sea Salt",
+      description: "Perfect balance between salt and natural sweetness",
       color: "from-blue-50 to-cyan-50",
       textColor: "text-blue-800",
       popular: false,
@@ -34,19 +34,19 @@ const ProductShowcase = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 bg-accent/20 rounded-full px-4 py-2 text-accent-foreground text-sm font-medium">
             <div className="w-2 h-2 bg-accent rounded-full" />
-            <span>Vores Smagsfamilie</span>
+            <span>Our Flavor Family</span>
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
-            Tre Unikke
+            Three Unique
             <span className="block bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Smagsoplevelser
+              Taste Experiences
             </span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hver smag er omhyggeligt udviklet for at give dig den perfekte balance 
-            mellem sundhed og nydelse.
+            Each flavor is carefully crafted to give you the perfect balance 
+            between health and indulgence.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const ProductShowcase = () => {
             <div className="relative z-10">
               <img 
                 src={productImage} 
-                alt="Lotus seed produkter i tre forskellige smage" 
+                alt="Lotus seed products in three different flavors" 
                 className="w-full h-auto rounded-2xl shadow-medium"
               />
             </div>
@@ -73,7 +73,7 @@ const ProductShowcase = () => {
               >
                 {flavor.popular && (
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                    POPULÆR
+                    POPULAR
                   </div>
                 )}
                 
@@ -99,17 +99,17 @@ const ProductShowcase = () => {
         {/* CTA Section */}
         <div className="text-center space-y-6">
           <h3 className="text-2xl font-bold text-foreground">
-            Klar til at prøve alle tre?
+            Ready to try all three?
           </h3>
           <p className="text-muted-foreground">
-            Få vores smagspakke og oplev den fulde lotus seed oplevelse
+            Get our flavor pack and experience the complete lotus seed journey
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="px-8">
-              Køb Smagspakke
+              Buy Flavor Pack
             </Button>
             <Button variant="accent" size="lg" className="px-8">
-              Se Næringsstoffer
+              View Nutrition
             </Button>
           </div>
         </div>

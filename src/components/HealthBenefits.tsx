@@ -4,39 +4,39 @@ const HealthBenefits = () => {
   const benefits = [
     {
       icon: "🌱",
-      title: "Rig på Protein",
-      description: "Op til 20g protein per 100g - perfekt til aktive danskere",
+      title: "Rich in Protein",
+      description: "Up to 20g protein per 100g - perfect for active lifestyles",
       stat: "20g",
       statLabel: "protein per 100g"
     },
     {
       icon: "💚",
-      title: "Naturlige Fibre",
-      description: "Støtter fordøjelsen og holder dig mæt længere",
+      title: "Natural Fiber",
+      description: "Supports digestion and keeps you full longer",
       stat: "14g",
-      statLabel: "fibre per 100g"
+      statLabel: "fiber per 100g"
     },
     {
       icon: "⚡",
-      title: "Lav i Kalorier",
-      description: "Kun 89 kalorier per portion - snack uden skyldfølelse",
+      title: "Low in Calories",
+      description: "Only 89 calories per serving - guilt-free snacking",
       stat: "89",
-      statLabel: "kalorier per portion"
+      statLabel: "calories per serving"
     },
     {
       icon: "🧠",
-      title: "Magnesium & Fosfor",
-      description: "Vigtige mineraler for hjernen og musklerne",
+      title: "Magnesium & Phosphorus",
+      description: "Essential minerals for brain and muscle function",
       stat: "100%",
-      statLabel: "naturlige mineraler"
+      statLabel: "natural minerals"
     }
   ];
 
   const certifications = [
-    { label: "VEGANSK", icon: "🌿" },
-    { label: "GLUTENFRI", icon: "🌾" },
+    { label: "VEGAN", icon: "🌿" },
+    { label: "GLUTEN FREE", icon: "🌾" },
     { label: "NON-GMO", icon: "🧬" },
-    { label: "ØKOLOGISK", icon: "🍃" }
+    { label: "ORGANIC", icon: "🍃" }
   ];
 
   return (
@@ -46,19 +46,19 @@ const HealthBenefits = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 bg-background/80 backdrop-blur-sm rounded-full px-4 py-2 text-foreground text-sm font-medium">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse-soft" />
-            <span>Sundhed & Næring</span>
+            <span>Health & Nutrition</span>
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-accent-foreground">
-            Naturens Egen
+            Nature's Own
             <span className="block text-accent-foreground/80">
               Superfood
             </span>
           </h2>
           
           <p className="text-lg text-accent-foreground/70 max-w-2xl mx-auto">
-            Lotus seeds har været værdsat i tusindvis af år for deres utrolige sundhedsfordele. 
-            Nu kan du nyde dem i moderne, lækre varianter.
+            Lotus seeds have been treasured for thousands of years for their incredible health benefits. 
+            Now you can enjoy them in modern, delicious varieties.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ const HealthBenefits = () => {
         {/* Certifications */}
         <div className="text-center space-y-8">
           <h3 className="text-xl font-semibold text-accent-foreground">
-            Certificeret Kvalitet
+            Certified Quality
           </h3>
           
           <div className="flex flex-wrap justify-center gap-6">
@@ -115,7 +115,7 @@ const HealthBenefits = () => {
           </div>
           
           <p className="text-accent-foreground/60 text-sm max-w-xl mx-auto">
-            Alle vores produkter er certificeret og lever op til de højeste danske og europæiske standarder
+            All our products are certified and meet the highest international quality standards
           </p>
         </div>
       </div>

@@ -16,20 +16,20 @@ const HeroSection = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white/90 text-sm">
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse-soft" />
-                <span>Naturlig • Sund • Lækker</span>
+                <span>Natural • Healthy • Delicious</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Smag
-                <span className="block text-white/90">Naturens</span>
+                Taste
+                <span className="block text-white/90">Nature's</span>
                 <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                  Perfektion
+                  Perfection
                 </span>
               </h1>
               
               <p className="text-lg lg:text-xl text-white/90 max-w-2xl">
-                Oplev vores smagfulde lotus seeds - den perfekte sunde snack fra naturens eget apotek. 
-                Rig på næringsstoffer og fantastisk i smag.
+                Discover our flavoured lotus seeds - the perfect healthy snack from nature's own pharmacy. 
+                Rich in nutrients and amazing in taste.
               </p>
             </div>
             
@@ -39,14 +39,14 @@ const HeroSection = () => {
                 size="lg"
                 className="text-lg px-8 py-6 h-auto"
               >
-                Bestil Nu
+                Order Now
               </Button>
               <Button 
                 variant="minimal" 
                 size="lg"
                 className="text-lg px-8 py-6 h-auto bg-white/10 border-white/20 text-white hover:bg-white/20"
               >
-                Læs Mere
+                Learn More
               </Button>
             </div>
             
@@ -54,19 +54,19 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-6 text-white/80 text-sm font-medium">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/60 rounded-full" />
-                <span>VEGANSK</span>
+                <span>VEGAN</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/60 rounded-full" />
-                <span>GLUTENFRI</span>
+                <span>GLUTEN FREE</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/60 rounded-full" />
-                <span>RIG PÅ PROTEIN</span>
+                <span>HIGH PROTEIN</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/60 rounded-full" />
-                <span>NATURLIG</span>
+                <span>NATURAL</span>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const HeroSection = () => {
             <div className="relative z-10 animate-float">
               <img 
                 src={heroImage} 
-                alt="Smukke lotus seeds i forskellige smage" 
+                alt="Beautiful lotus seeds in various flavors" 
                 className="w-full h-auto rounded-3xl shadow-strong"
               />
             </div>

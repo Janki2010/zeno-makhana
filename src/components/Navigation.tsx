@@ -17,24 +17,24 @@ const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#produkter" className="text-foreground hover:text-primary transition-colors">
-              Produkter
+            <a href="#products" className="text-foreground hover:text-primary transition-colors">
+              Products
             </a>
-            <a href="#sundhed" className="text-foreground hover:text-primary transition-colors">
-              Sundhed
+            <a href="#health" className="text-foreground hover:text-primary transition-colors">
+              Health
             </a>
-            <a href="#om-os" className="text-foreground hover:text-primary transition-colors">
-              Om Os
+            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+              About
             </a>
-            <a href="#kontakt" className="text-foreground hover:text-primary transition-colors">
-              Kontakt
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+              Contact
             </a>
           </div>
 
           {/* CTA Button */}
           <div className="flex items-center gap-4">
             <Button variant="hero" size="sm">
-              Bestil Nu
+              Order Now
             </Button>
           </div>
         </div>

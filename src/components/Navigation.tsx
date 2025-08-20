@@ -7,12 +7,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">🪷</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">
-              LotusSeeds
-            </span>
+            <span className="text-xl font-bold text-foreground">Zeno</span>
           </div>
 
           {/* Navigation Links */}
@@ -31,12 +26,6 @@ const Navigation = () => {
             </a>
           </div>
 
-          {/* CTA Button */}
-          <div className="flex items-center gap-4">
-            <Button variant="hero" size="sm">
-              Order Now
-            </Button>
-          </div>
         </div>
       </div>
     </nav>

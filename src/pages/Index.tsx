@@ -19,13 +19,10 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 gradient-hero rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">🪷</span>
-                </div>
-                <span className="text-xl font-bold">LotusSeeds</span>
+                <span className="text-xl font-bold">Zeno</span>
               </div>
               <p className="text-background/70 text-sm">
-                Leading provider of premium lotus seeds. 
+                Leading provider of premium Makhana. 
                 World-class natural snacking.
               </p>
             </div>
@@ -33,10 +30,11 @@ const Index = () => {
             <div className="space-y-4">
               <h3 className="font-semibold">Products</h3>
               <div className="space-y-2 text-sm text-background/70">
-                <div>Vanilla Dream</div>
-                <div>Chocolate Temptation</div>
-                <div>Sea Salt</div>
-                <div>Flavor Pack</div>
+                <div>Cheddar Cheese Makhana</div>
+                <div>Cream & Onion Makhana</div>
+                <div>Salt & Pepper Makhana</div>
+                <div>Sweet Chilli Makhana</div>
+                <div>Piri Piri Makhana</div>
               </div>
             </div>
             
@@ -61,7 +59,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
-            © 2024 LotusSeeds. All rights reserved.
+            © 2024 Zeno. All rights reserved.
           </div>
         </div>
       </footer>

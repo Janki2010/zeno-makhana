@@ -30,7 +30,7 @@ const CallToAction = () => {
                 </h2>
                 
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Order now and get your first flavor pack with all three varieties. 
+                  Explore our premium Makhana variety pack with all five amazing flavors. 
                   100% satisfaction guarantee or your money back.
                 </p>
               </div>
@@ -50,7 +50,7 @@ const CallToAction = () => {
                 <div className="space-y-2">
                   <div className="text-2xl">🏆</div>
                   <h3 className="font-semibold text-foreground">Premium Quality</h3>
-                  <p className="text-sm text-muted-foreground">Hand-picked lotus seeds of the highest quality</p>
+                  <p className="text-sm text-muted-foreground">Hand-picked Makhana of the highest quality</p>
                 </div>
               </div>
 
@@ -64,20 +64,13 @@ const CallToAction = () => {
                     Save 25% on your first order
                   </div>
                   <div className="text-muted-foreground">
-                    Use code <span className="font-mono font-bold text-primary">LOTUS25</span> at checkout
+                    Use code <span className="font-mono font-bold text-primary">MAKHANA25</span> at checkout
                   </div>
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  className="text-lg px-10 py-6 h-auto"
-                >
-                  Order Now - Only $29
-                </Button>
                 <Button 
                   variant="minimal" 
                   size="lg"

@@ -5,24 +5,38 @@ import productImage from "@/assets/product-flavors.jpg";
 const ProductShowcase = () => {
   const flavors = [
     {
-      name: "Vanilla Dream",
-      description: "Mild and creamy vanilla flavor that melts on your tongue",
-      color: "from-amber-100 to-orange-50",
-      textColor: "text-amber-800",
-      popular: false,
-    },
-    {
-      name: "Chocolate Temptation",
-      description: "Rich and deep chocolate flavor for the sweet tooth",
-      color: "from-orange-100 to-red-50", 
+      name: "Cheddar Cheese Makhana",
+      description: "Rich and savory cheddar cheese flavor that's irresistibly cheesy",
+      color: "from-yellow-100 to-orange-50",
       textColor: "text-orange-800",
       popular: true,
     },
     {
-      name: "Sea Salt",
-      description: "Perfect balance between salt and natural sweetness",
-      color: "from-blue-50 to-cyan-50",
-      textColor: "text-blue-800",
+      name: "Cream & Onion Makhana",
+      description: "Classic creamy onion flavor with a perfect balance of herbs",
+      color: "from-green-100 to-emerald-50",
+      textColor: "text-green-800",
+      popular: false,
+    },
+    {
+      name: "Salt & Pepper Makhana",
+      description: "Simple yet flavorful combination of sea salt and cracked pepper",
+      color: "from-gray-100 to-slate-50",
+      textColor: "text-slate-800",
+      popular: false,
+    },
+    {
+      name: "Sweet Chilli Makhana",
+      description: "Perfect blend of sweet and spicy with a tantalizing chilli kick",
+      color: "from-red-100 to-pink-50",
+      textColor: "text-red-800",
+      popular: false,
+    },
+    {
+      name: "Piri Piri Makhana",
+      description: "Fiery and bold Portuguese-inspired piri piri spice blend",
+      color: "from-orange-100 to-red-50",
+      textColor: "text-red-800",
       popular: false,
     },
   ];
@@ -45,7 +59,7 @@ const ProductShowcase = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Each flavor is carefully crafted to give you the perfect balance 
+            Each Makhana flavor is carefully crafted to give you the perfect balance 
             between health and indulgence.
           </p>
         </div>
@@ -57,7 +71,7 @@ const ProductShowcase = () => {
             <div className="relative z-10">
               <img 
                 src={productImage} 
-                alt="Lotus seed products in three different flavors" 
+                alt="Makhana products in different flavors" 
                 className="w-full h-auto rounded-2xl shadow-medium"
               />
             </div>
@@ -99,15 +113,12 @@ const ProductShowcase = () => {
         {/* CTA Section */}
         <div className="text-center space-y-6">
           <h3 className="text-2xl font-bold text-foreground">
-            Ready to try all three?
+            Ready to try all flavors?
           </h3>
           <p className="text-muted-foreground">
-            Get our flavor pack and experience the complete lotus seed journey
+            Experience the complete Makhana journey with our variety pack
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="px-8">
-              Buy Flavor Pack
-            </Button>
             <Button variant="accent" size="lg" className="px-8">
               View Nutrition
             </Button>

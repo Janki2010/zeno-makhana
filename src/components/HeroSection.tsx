@@ -28,19 +28,12 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-lg lg:text-xl text-white/90 max-w-2xl">
-                Discover our flavoured lotus seeds - the perfect healthy snack from nature's own pharmacy. 
+                Discover our flavoured Makhana - the perfect healthy snack from nature's own pharmacy. 
                 Rich in nutrients and amazing in taste.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                variant="hero" 
-                size="lg"
-                className="text-lg px-8 py-6 h-auto"
-              >
-                Order Now
-              </Button>
               <Button 
                 variant="minimal" 
                 size="lg"
@@ -76,7 +69,7 @@ const HeroSection = () => {
             <div className="relative z-10 animate-float">
               <img 
                 src={heroImage} 
-                alt="Beautiful lotus seeds in various flavors" 
+                alt="Beautiful Makhana in various flavors" 
                 className="w-full h-auto rounded-3xl shadow-strong"
               />
             </div>

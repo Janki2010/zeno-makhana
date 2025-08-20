@@ -57,7 +57,7 @@ const HealthBenefits = () => {
           </h2>
           
           <p className="text-lg text-accent-foreground/70 max-w-2xl mx-auto">
-            Lotus seeds have been treasured for thousands of years for their incredible health benefits. 
+            Makhana has been treasured for thousands of years for their incredible health benefits. 
             Now you can enjoy them in modern, delicious varieties.
           </p>
         </div>

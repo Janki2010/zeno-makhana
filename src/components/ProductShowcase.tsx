@@ -52,7 +52,7 @@ const ProductShowcase = () => {
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
-            Three Unique
+            Five Unique
             <span className="block bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               Taste Experiences
             </span>
@@ -70,8 +70,8 @@ const ProductShowcase = () => {
           <div className="relative">
             <div className="relative z-10">
               <img 
-                src={productImage} 
-                alt="Makhana products in different flavors" 
+                src="/lovable-uploads/84fcdff3-f8b3-4bc1-b900-02f51538a1f3.png" 
+                alt="Zeno Makhana products in all five flavors" 
                 className="w-full h-auto rounded-2xl shadow-medium"
               />
             </div>

@@ -7,7 +7,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-foreground">Zeno</span>
+            <img 
+              src="/lovable-uploads/1253bd5d-37ed-47d2-9377-3343db34fef0.png" 
+              alt="Zeno Logo" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Navigation Links */}

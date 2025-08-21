@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import WhatIsMakhana from "@/components/WhatIsMakhana";
+import OurStory from "@/components/OurStory";
 import ProductShowcase from "@/components/ProductShowcase";
 import HealthBenefits from "@/components/HealthBenefits";
 import CallToAction from "@/components/CallToAction";
@@ -11,6 +12,7 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <WhatIsMakhana />
+      <OurStory />
       <ProductShowcase />
       <HealthBenefits />
       <CallToAction />

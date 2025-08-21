@@ -1,3 +1,5 @@
+import makhanaHarvesting from "@/assets/makhana-harvesting.jpg";
+
 const WhatIsMakhana = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
@@ -23,6 +25,15 @@ const WhatIsMakhana = () => {
             <p>
               Makhana is made from the seeds of the Euryale ferox plant, which grows in water bodies like ponds.
             </p>
+            
+            {/* Harvesting Image */}
+            <div className="my-8 rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src={makhanaHarvesting} 
+                alt="Traditional Makhana harvesting process in water bodies" 
+                className="w-full h-auto"
+              />
+            </div>
             
             <p>
               These seeds are also known as Lotus seeds, Euryale Ferox, fox nuts or gorgon nut.

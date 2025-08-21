@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-lotus-seeds.jpg";
 
 const HeroSection = () => {
   return (
@@ -59,7 +58,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10 animate-float">
               <img 
-                src={heroImage} 
+                src="/lovable-uploads/fae6c752-8cd1-4000-8212-64c0813ac62d.png" 
                 alt="Beautiful Makhana in various flavors" 
                 className="w-full h-auto rounded-3xl shadow-strong"
               />

@@ -10,6 +10,7 @@ const ProductShowcase = () => {
       color: "from-yellow-100 to-orange-50",
       textColor: "text-orange-800",
       popular: true,
+      image: "/lovable-uploads/98059623-96fd-4b2b-985f-6e6668b36901.png",
     },
     {
       name: "Cream & Onion Makhana",
@@ -17,6 +18,7 @@ const ProductShowcase = () => {
       color: "from-green-100 to-emerald-50",
       textColor: "text-green-800",
       popular: false,
+      image: "/lovable-uploads/a235b583-704d-4bc7-92b6-7a267361743c.png",
     },
     {
       name: "Salt & Pepper Makhana",
@@ -24,6 +26,7 @@ const ProductShowcase = () => {
       color: "from-gray-100 to-slate-50",
       textColor: "text-slate-800",
       popular: false,
+      image: "/lovable-uploads/57b49fca-f28c-4dbc-83ed-87a1160ade13.png",
     },
     {
       name: "Sweet Chilli Makhana",
@@ -31,6 +34,7 @@ const ProductShowcase = () => {
       color: "from-red-100 to-pink-50",
       textColor: "text-red-800",
       popular: false,
+      image: "/lovable-uploads/08e7fd9b-5b1d-4edd-8557-30a79875498d.png",
     },
     {
       name: "Piri Piri Makhana",
@@ -38,6 +42,7 @@ const ProductShowcase = () => {
       color: "from-orange-100 to-red-50",
       textColor: "text-red-800",
       popular: false,
+      image: "/lovable-uploads/ee774028-c384-4957-9814-3b9da2925bc9.png",
     },
   ];
 
@@ -64,50 +69,40 @@ const ProductShowcase = () => {
           </p>
         </div>
 
-        {/* Product Grid */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Product Image */}
-          <div className="relative">
-            <div className="relative z-10">
-              <img 
-                src="/lovable-uploads/84fcdff3-f8b3-4bc1-b900-02f51538a1f3.png" 
-                alt="Zeno Makhana products in all five flavors" 
-                className="w-full h-auto rounded-2xl shadow-medium"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 gradient-accent rounded-full blur-2xl opacity-30" />
-          </div>
-
-          {/* Flavor Cards */}
-          <div className="space-y-6">
-            {flavors.map((flavor, index) => (
-              <Card 
-                key={flavor.name} 
-                className={`relative overflow-hidden border-0 shadow-soft hover:shadow-medium transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${flavor.color}`}
-              >
-                {flavor.popular && (
-                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                    POPULAR
-                  </div>
-                )}
-                
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2 flex-1">
-                      <h3 className={`text-xl font-bold ${flavor.textColor}`}>
-                        {flavor.name}
-                      </h3>
-                      <p className={`${flavor.textColor}/80 text-sm leading-relaxed`}>
-                        {flavor.description}
-                      </p>
-                    </div>
-                    
-                    <div className={`w-12 h-12 rounded-full ${flavor.color} border-2 border-${flavor.textColor}/20 ml-4`} />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Flavor Cards Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {flavors.map((flavor, index) => (
+            <Card 
+              key={flavor.name} 
+              className="relative overflow-hidden border-0 shadow-soft hover:shadow-medium transition-all duration-300 transform hover:-translate-y-1 bg-background"
+            >
+              {flavor.popular && (
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full z-10">
+                  POPULAR
+                </div>
+              )}
+              
+              {/* Product Image */}
+              <div className="aspect-square p-4">
+                <img 
+                  src={flavor.image} 
+                  alt={`${flavor.name} product package`} 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              
+              <CardContent className="p-6 pt-0">
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-foreground">
+                    {flavor.name}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {flavor.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* CTA Section */}

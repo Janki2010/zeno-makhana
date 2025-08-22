@@ -1,5 +1,3 @@
-import makhanaHarvesting from "@/assets/makhana-harvesting.jpg";
-
 const WhatIsMakhana = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
@@ -26,14 +24,6 @@ const WhatIsMakhana = () => {
               Makhana is made from the seeds of the Euryale ferox plant, which grows in water bodies like ponds.
             </p>
             
-            {/* Harvesting Image */}
-            <div className="my-8 rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src={makhanaHarvesting} 
-                alt="Traditional Makhana harvesting process in water bodies" 
-                className="w-full h-auto"
-              />
-            </div>
             
             <p>
               These seeds are also known as Lotus seeds, Euryale Ferox, fox nuts or gorgon nut.
@@ -64,6 +54,27 @@ const WhatIsMakhana = () => {
             <span>Sun-Dry</span>
             <span>Roast</span>
             <span>Flavor</span>
+          </div>
+
+          {/* Process Diagram */}
+          <div className="mt-16 space-y-6">
+            <h3 className="text-2xl font-bold text-foreground">
+              From Farm to Flavor: The Complete Process
+            </h3>
+            
+            <div className="bg-card rounded-2xl p-8 shadow-lg">
+              <img 
+                src="/lovable-uploads/ce654e30-a934-4b47-ac1f-0b544c291fef.png" 
+                alt="Complete Makhana production process from harvesting to flavoring in 8 steps" 
+                className="w-full max-w-3xl mx-auto rounded-xl"
+              />
+            </div>
+            
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
+              Our makhana goes through a meticulous 8-step traditional process: from harvesting lotus plants in pristine water bodies, 
+              collecting the precious seeds, careful cleaning and sun-drying, to the art of popping, sorting, polishing, and finally 
+              adding our signature natural flavors. Each step is crafted to preserve the nutritional value while creating the perfect crunch.
+            </p>
           </div>
         </div>
       </div>

@@ -40,7 +40,7 @@ const HealthBenefits = () => {
   ];
 
   return (
-    <section className="py-24 gradient-accent">
+    <section id="health" className="py-24 gradient-accent">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">

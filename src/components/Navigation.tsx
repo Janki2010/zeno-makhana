@@ -16,16 +16,16 @@ const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#products" className="text-foreground hover:text-primary transition-colors">
+            <a href="/#products" className="text-foreground hover:text-primary transition-colors">
               Products
             </a>
-            <a href="#health" className="text-foreground hover:text-primary transition-colors">
+            <a href="/#health" className="text-foreground hover:text-primary transition-colors">
               Health
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="/about" className="text-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a href="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </div>

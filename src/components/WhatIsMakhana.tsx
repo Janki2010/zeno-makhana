@@ -36,6 +36,12 @@ const WhatIsMakhana = () => {
             <p className="text-foreground font-medium">
               At Zeno, we roast them and add exciting natural flavours to create the perfect and healthy snack.
             </p>
+            
+            <p>
+              Our makhana goes through a meticulous 8-step traditional process: from harvesting lotus plants in pristine water bodies, 
+              collecting the precious seeds, careful cleaning and sun-drying, to the art of popping, sorting, polishing, and finally 
+              adding our signature natural flavors. Each step is crafted to preserve the nutritional value while creating the perfect crunch.
+            </p>
           </div>
 
           {/* Visual Elements */}
@@ -69,12 +75,6 @@ const WhatIsMakhana = () => {
                 className="w-full max-w-3xl mx-auto rounded-xl"
               />
             </div>
-            
-            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Our makhana goes through a meticulous 8-step traditional process: from harvesting lotus plants in pristine water bodies, 
-              collecting the precious seeds, careful cleaning and sun-drying, to the art of popping, sorting, polishing, and finally 
-              adding our signature natural flavors. Each step is crafted to preserve the nutritional value while creating the perfect crunch.
-            </p>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ const AboutUs = () => {
             </h1>
             
             <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              From Copenhagen to India, discover the story behind Zeno's mission to revolutionize 
+              From India to Europe, discover the story behind Zeno's mission to revolutionize 
               healthy snacking with traditional makhana.
             </p>
           </div>

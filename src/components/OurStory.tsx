@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const OurStory = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-16 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(217,70,159,0.1)_0%,transparent_50%)]" />
@@ -21,9 +21,9 @@ const OurStory = () => {
                 </div>
                 
                 <h2 className="text-3xl lg:text-5xl font-bold text-foreground leading-tight">
-                  From Copenhagen
+                  From India
                   <span className="block bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                    to India
+                    to Europe
                   </span>
                   A Mother's Promise
                 </h2>

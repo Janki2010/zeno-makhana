@@ -88,18 +88,67 @@ const WhatIsMakhana = () => {
             <span>Flavor</span>
           </div>
 
-          {/* Process Diagram */}
-          <div className="mt-16 space-y-6">
+          {/* Animated Process Flow */}
+          <div className="mt-16 space-y-8">
             <h3 className="text-2xl font-bold text-foreground">
               From Farm to Flavor: The Complete Process
             </h3>
             
-            <div className="bg-card rounded-2xl p-8 shadow-lg">
-              <img 
-                src="/lovable-uploads/ce654e30-a934-4b47-ac1f-0b544c291fef.png" 
-                alt="Complete Makhana production process from harvesting to flavoring in 8 steps" 
-                className="w-full max-w-3xl mx-auto rounded-xl"
-              />
+            <div className="bg-card rounded-2xl p-8 shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                {[
+                  { icon: "🪷", title: "Harvesting", desc: "Fresh lotus plants from pristine waters", delay: "0s" },
+                  { icon: "🫧", title: "Collecting", desc: "Precious seeds carefully gathered", delay: "0.5s" },
+                  { icon: "💧", title: "Cleaning", desc: "Thorough washing and preparation", delay: "1s" },
+                  { icon: "☀️", title: "Sun-Drying", desc: "Natural drying under sunlight", delay: "1.5s" },
+                  { icon: "💥", title: "Popping", desc: "Traditional popping technique", delay: "2s" },
+                  { icon: "🔍", title: "Sorting", desc: "Quality selection process", delay: "2.5s" },
+                  { icon: "✨", title: "Polishing", desc: "Perfect finish and texture", delay: "3s" },
+                  { icon: "🌿", title: "Flavoring", desc: "Natural signature flavors added", delay: "3.5s" }
+                ].map((step, index) => (
+                  <div 
+                    key={index}
+                    className={`relative flex flex-col items-center text-center space-y-3 p-4 rounded-xl bg-background/50 border border-border/50 animate-fade-in group hover:scale-105 transition-transform duration-300 ${index >= 4 ? 'md:col-span-1' : ''}`}
+                    style={{ animationDelay: step.delay }}
+                  >
+                    {/* Step number */}
+                    <div className="absolute -top-2 -left-2 w-6 h-6 bg-primary text-primary-foreground rounded-full text-xs flex items-center justify-center font-bold animate-pulse-soft" style={{ animationDelay: step.delay }}>
+                      {index + 1}
+                    </div>
+                    
+                    {/* Icon with animation */}
+                    <div className="text-4xl group-hover:animate-bounce" style={{ animationDelay: step.delay }}>
+                      {step.icon}
+                    </div>
+                    
+                    {/* Title and description */}
+                    <div className="space-y-1">
+                      <h4 className="font-semibold text-foreground text-sm">{step.title}</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
+                    </div>
+                    
+                    {/* Connecting arrow (except for last item) */}
+                    {index < 7 && (
+                      <div className="hidden md:block absolute -right-8 top-1/2 transform -translate-y-1/2 text-primary/50 animate-pulse-soft" style={{ animationDelay: `${parseFloat(step.delay) + 0.2}s` }}>
+                        →
+                      </div>
+                    )}
+                    
+                    {/* Mobile connecting arrow (vertical) */}
+                    {index < 7 && (
+                      <div className="md:hidden absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-primary/50 rotate-90 animate-pulse-soft" style={{ animationDelay: `${parseFloat(step.delay) + 0.2}s` }}>
+                        →
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              
+              {/* Flowing particles animation */}
+              <div className="relative mt-8 h-2 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 rounded-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse-soft opacity-60"></div>
+                <div className="absolute top-0 left-0 h-full w-1/4 bg-gradient-to-r from-primary/50 to-transparent animate-[slide-in-right_4s_ease-in-out_infinite]"></div>
+              </div>
             </div>
           </div>
         </div>

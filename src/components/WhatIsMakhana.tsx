@@ -44,15 +44,41 @@ const WhatIsMakhana = () => {
             </p>
           </div>
 
-          {/* Visual Elements */}
-          <div className="flex justify-center items-center gap-8 pt-8">
-            <div className="text-4xl">🪷</div>
-            <div className="w-8 h-0.5 bg-primary/30"></div>
-            <div className="text-4xl">☀️</div>
-            <div className="w-8 h-0.5 bg-primary/30"></div>
-            <div className="text-4xl">🔥</div>
-            <div className="w-8 h-0.5 bg-primary/30"></div>
-            <div className="text-4xl">🌿</div>
+          {/* Popping Makhana Animation */}
+          <div className="relative py-12">
+            {/* Animated makhana seeds popping */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(8)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`absolute animate-bounce text-2xl opacity-70`}
+                  style={{
+                    left: `${15 + i * 10}%`,
+                    top: `${20 + (i % 3) * 20}%`,
+                    animationDelay: `${i * 0.3}s`,
+                    animationDuration: `${2 + (i % 2)}s`
+                  }}
+                >
+                  🤍
+                </div>
+              ))}
+            </div>
+            
+            {/* Process visualization */}
+            <div className="relative z-10 flex justify-center items-center gap-8">
+              <div className="text-4xl animate-pulse-soft">🪷</div>
+              <div className="w-8 h-0.5 bg-primary/30"></div>
+              <div className="text-4xl animate-bounce" style={{ animationDelay: '0.5s' }}>☀️</div>
+              <div className="w-8 h-0.5 bg-primary/30"></div>
+              <div className="text-4xl animate-pulse-soft" style={{ animationDelay: '1s' }}>🔥</div>
+              <div className="w-8 h-0.5 bg-primary/30"></div>
+              <div className="text-4xl animate-bounce" style={{ animationDelay: '1.5s' }}>🌿</div>
+            </div>
+            
+            {/* Popping effect center */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="text-6xl animate-scale-bounce opacity-80">💥</div>
+            </div>
           </div>
           
           <div className="flex justify-center gap-6 text-sm text-muted-foreground font-medium">

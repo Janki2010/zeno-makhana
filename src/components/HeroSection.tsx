@@ -55,24 +55,6 @@ const HeroSection = () => {
               ))}
             </div>
             
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button 
-                variant="secondary" 
-                size="lg"
-                className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30 text-lg px-8 py-6 h-auto hover-scale"
-              >
-                Shop Now
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 h-auto hover-scale"
-              >
-                Learn More
-              </Button>
-            </div>
-            
             {/* Health Benefits Bar */}
             <div className="flex flex-wrap gap-6 text-white/80 text-sm font-medium">
               <div className="flex items-center gap-2">

@@ -33,6 +33,45 @@ const HeroSection = () => {
               </p>
             </div>
             
+            {/* Dynamic Stats Bar */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              {[
+                { number: "100%", label: "Natural", icon: "🌱" },
+                { number: "20g", label: "Protein", icon: "💪" },
+                { number: "5+", label: "Flavors", icon: "🎨" },
+                { number: "89", label: "Calories", icon: "⚡" }
+              ].map((stat, index) => (
+                <div key={index} className="text-center space-y-2">
+                  <div className="text-2xl animate-bounce" style={{ animationDelay: `${index * 0.2}s` }}>
+                    {stat.icon}
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white animate-fade-in" style={{ animationDelay: `${index * 0.3}s` }}>
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-white/80 font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Button 
+                variant="secondary" 
+                size="lg"
+                className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30 text-lg px-8 py-6 h-auto hover-scale"
+              >
+                Shop Now
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 h-auto hover-scale"
+              >
+                Learn More
+              </Button>
+            </div>
             
             {/* Health Benefits Bar */}
             <div className="flex flex-wrap gap-6 text-white/80 text-sm font-medium">

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import personEnjoyingMakhana from "@/assets/person-enjoying-makhana.jpg";
 
 const HeroSection = () => {
   return (
@@ -58,15 +59,20 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10 animate-float">
               <img 
-                src="/lovable-uploads/fae6c752-8cd1-4000-8212-64c0813ac62d.png" 
-                alt="Beautiful Makhana in various flavors" 
-                className="w-full h-auto rounded-3xl shadow-strong"
+                src={personEnjoyingMakhana}
+                alt="Happy person enjoying delicious flavored Makhana - the perfect healthy snack" 
+                className="w-full h-auto rounded-3xl shadow-strong hover:scale-105 transition-transform duration-500"
               />
             </div>
             
             {/* Decorative Elements */}
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse-soft" />
             <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse-soft" />
+            
+            {/* Floating makhana elements */}
+            <div className="absolute top-4 right-4 text-2xl animate-bounce opacity-80" style={{ animationDelay: '0.5s' }}>🤍</div>
+            <div className="absolute bottom-8 right-8 text-xl animate-bounce opacity-60" style={{ animationDelay: '1s' }}>🤍</div>
+            <div className="absolute top-1/2 -left-4 text-lg animate-bounce opacity-70" style={{ animationDelay: '1.5s' }}>🤍</div>
           </div>
         </div>
       </div>

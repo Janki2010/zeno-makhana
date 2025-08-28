@@ -62,15 +62,6 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="space-y-4">
-              <h3 className="font-semibold">Information</h3>
-              <div className="space-y-2 text-sm text-background/70">
-                <div>About Us</div>
-                <div>Nutrition</div>
-                <div>Shipping</div>
-                <div>Returns</div>
-              </div>
-            </div>
             
             <div className="space-y-4">
               <h3 className="font-semibold">Contact</h3>

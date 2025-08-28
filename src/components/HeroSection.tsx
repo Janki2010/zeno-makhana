@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import personEnjoyingMakhana from "@/assets/person-enjoying-makhana.jpg";
-import realisticMakhanaHero from "@/assets/realistic-makhana-hero.jpg";
+import authenticMakhanaHero from "@/assets/authentic-makhana-hero.jpg";
 
 const HeroSection = () => {
   return (
@@ -90,8 +90,8 @@ const HeroSection = () => {
             {/* Second Hero Image */}
             <div className="relative z-10 animate-float" style={{ animationDelay: '0.3s' }}>
               <img 
-                src={realisticMakhanaHero}
-                alt="Close-up of real white puffy Makhana (lotus seeds) showing authentic texture and natural appearance" 
+                src={authenticMakhanaHero}
+                alt="Authentic white puffy Makhana seeds showing real fox nuts texture - natural lotus seed snack" 
                 className="w-full h-48 object-cover rounded-2xl shadow-elegant hover:scale-105 transition-transform duration-500 border border-white/20"
               />
               

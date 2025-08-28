@@ -6,6 +6,7 @@ import OurStory from "@/components/OurStory";
 import ProductShowcase from "@/components/ProductShowcase";
 import HealthBenefits from "@/components/HealthBenefits";
 import CallToAction from "@/components/CallToAction";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const Index = () => {
   return (
@@ -31,7 +32,24 @@ const Index = () => {
                 Leading provider of premium Makhana. 
                 World-class natural snacking.
               </p>
+              
+              {/* Social Media Icons */}
+              <div className="flex gap-4 pt-2">
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <Facebook size={20} />
+                </a>
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <Instagram size={20} />
+                </a>
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <Twitter size={20} />
+                </a>
+                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <Youtube size={20} />
+                </a>
+              </div>
             </div>
+            
             
             <div className="space-y-4">
               <h3 className="font-semibold">Products</h3>
@@ -65,7 +83,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
-            © 2024 Zeno. All rights reserved.
+            © 2025 Zeno. All rights reserved.
           </div>
         </div>
       </footer>

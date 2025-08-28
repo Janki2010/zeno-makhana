@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import personEnjoyingMakhana from "@/assets/person-enjoying-makhana.jpg";
+import makhanaBowlHero from "@/assets/makhana-bowl-hero.jpg";
 
 const HeroSection = () => {
   return (
@@ -76,14 +77,30 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Right Image */}
-          <div className="relative">
+          {/* Right Images */}
+          <div className="relative space-y-6">
             <div className="relative z-10 animate-float">
               <img 
                 src={personEnjoyingMakhana}
                 alt="Happy person enjoying delicious flavored Makhana - the perfect healthy snack" 
                 className="w-full h-auto rounded-3xl shadow-strong hover:scale-105 transition-transform duration-500"
               />
+            </div>
+            
+            {/* Second Hero Image */}
+            <div className="relative z-10 animate-float" style={{ animationDelay: '0.3s' }}>
+              <img 
+                src={makhanaBowlHero}
+                alt="Beautiful bowl of premium flavored Makhana varieties - natural healthy snacking" 
+                className="w-full h-48 object-cover rounded-2xl shadow-elegant hover:scale-105 transition-transform duration-500 border border-white/20"
+              />
+              
+              {/* Overlay text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="text-sm font-medium opacity-90">Premium Quality</div>
+                <div className="text-xs opacity-70">Artisan Crafted Flavors</div>
+              </div>
             </div>
             
             {/* Decorative Elements */}

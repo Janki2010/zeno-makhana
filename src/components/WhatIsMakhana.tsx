@@ -1,3 +1,5 @@
+import { Flower2, Package, Droplets, Sun, Zap, Filter, Sparkles, Leaf } from "lucide-react";
+
 const WhatIsMakhana = () => {
   return (
     <section className="py-16 lg:py-20 bg-background">
@@ -66,18 +68,18 @@ const WhatIsMakhana = () => {
             
             {/* Process visualization */}
             <div className="relative z-10 flex justify-center items-center gap-8">
-              <div className="text-4xl animate-pulse-soft">🪷</div>
+              <div className="text-primary animate-pulse-soft"><Flower2 size={36} /></div>
               <div className="w-8 h-0.5 bg-primary/30"></div>
-              <div className="text-4xl animate-bounce" style={{ animationDelay: '0.5s' }}>☀️</div>
+              <div className="text-primary animate-bounce" style={{ animationDelay: '0.5s' }}><Sun size={36} /></div>
               <div className="w-8 h-0.5 bg-primary/30"></div>
-              <div className="text-4xl animate-pulse-soft" style={{ animationDelay: '1s' }}>🔥</div>
+              <div className="text-primary animate-pulse-soft" style={{ animationDelay: '1s' }}><Zap size={36} /></div>
               <div className="w-8 h-0.5 bg-primary/30"></div>
-              <div className="text-4xl animate-bounce" style={{ animationDelay: '1.5s' }}>🌿</div>
+              <div className="text-primary animate-bounce" style={{ animationDelay: '1.5s' }}><Leaf size={36} /></div>
             </div>
             
             {/* Popping effect center */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="text-6xl animate-scale-bounce opacity-80">💥</div>
+              <div className="text-primary animate-scale-bounce opacity-80"><Zap size={60} /></div>
             </div>
           </div>
           
@@ -97,15 +99,17 @@ const WhatIsMakhana = () => {
             <div className="bg-card rounded-2xl p-8 shadow-lg overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
                 {[
-                  { icon: "🪷", title: "Harvesting", desc: "Fresh lotus plants from pristine waters", delay: "0s" },
-                  { icon: "🫧", title: "Collecting", desc: "Precious seeds carefully gathered", delay: "0.5s" },
-                  { icon: "💧", title: "Cleaning", desc: "Thorough washing and preparation", delay: "1s" },
-                  { icon: "☀️", title: "Sun-Drying", desc: "Natural drying under sunlight", delay: "1.5s" },
-                  { icon: "💥", title: "Popping", desc: "Traditional popping technique", delay: "2s" },
-                  { icon: "🔍", title: "Sorting", desc: "Quality selection process", delay: "2.5s" },
-                  { icon: "✨", title: "Polishing", desc: "Perfect finish and texture", delay: "3s" },
-                  { icon: "🌿", title: "Flavoring", desc: "Natural signature flavors added", delay: "3.5s" }
-                ].map((step, index) => (
+                  { icon: Flower2, title: "Harvesting", desc: "Fresh lotus plants from pristine waters", delay: "0s" },
+                  { icon: Package, title: "Collecting", desc: "Precious seeds carefully gathered", delay: "0.5s" },
+                  { icon: Droplets, title: "Cleaning", desc: "Thorough washing and preparation", delay: "1s" },
+                  { icon: Sun, title: "Sun-Drying", desc: "Natural drying under sunlight", delay: "1.5s" },
+                  { icon: Zap, title: "Popping", desc: "Traditional popping technique", delay: "2s" },
+                  { icon: Filter, title: "Sorting", desc: "Quality selection process", delay: "2.5s" },
+                  { icon: Sparkles, title: "Polishing", desc: "Perfect finish and texture", delay: "3s" },
+                  { icon: Leaf, title: "Flavoring", desc: "Natural signature flavors added", delay: "3.5s" }
+                ].map((step, index) => {
+                  const IconComponent = step.icon;
+                  return (
                   <div 
                     key={index}
                     className={`relative flex flex-col items-center text-center space-y-3 p-4 rounded-xl bg-background/50 border border-border/50 animate-fade-in group hover:scale-105 transition-transform duration-300 ${index >= 4 ? 'md:col-span-1' : ''}`}
@@ -117,8 +121,8 @@ const WhatIsMakhana = () => {
                     </div>
                     
                     {/* Icon with animation */}
-                    <div className="text-4xl group-hover:animate-bounce" style={{ animationDelay: step.delay }}>
-                      {step.icon}
+                    <div className="text-primary group-hover:animate-bounce" style={{ animationDelay: step.delay }}>
+                      <IconComponent size={32} />
                     </div>
                     
                     {/* Title and description */}
@@ -141,7 +145,8 @@ const WhatIsMakhana = () => {
                       </div>
                     )}
                   </div>
-                ))}
+                  );
+                })}
               </div>
               
               {/* Flowing particles animation */}

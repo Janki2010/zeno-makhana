@@ -1,4 +1,14 @@
-import { Flower2, Package, Droplets, Sun, Zap, Filter, Sparkles, Leaf } from "lucide-react";
+import { Flower2, Sun, Zap, Leaf } from "lucide-react";
+
+// Import process images
+import harvestingImage from "@/assets/process-harvesting.jpg";
+import collectingImage from "@/assets/process-collecting.jpg";
+import cleaningImage from "@/assets/process-cleaning.jpg";
+import dryingImage from "@/assets/process-drying.jpg";
+import poppingImage from "@/assets/process-popping.jpg";
+import sortingImage from "@/assets/process-sorting.jpg";
+import polishingImage from "@/assets/process-polishing.jpg";
+import flavoringImage from "@/assets/process-flavoring.jpg";
 
 const WhatIsMakhana = () => {
   return (
@@ -99,17 +109,15 @@ const WhatIsMakhana = () => {
             <div className="bg-card rounded-2xl p-8 shadow-lg overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
                 {[
-                  { icon: Flower2, title: "Harvesting", desc: "Fresh lotus plants from pristine waters", delay: "0s" },
-                  { icon: Package, title: "Collecting", desc: "Precious seeds carefully gathered", delay: "0.5s" },
-                  { icon: Droplets, title: "Cleaning", desc: "Thorough washing and preparation", delay: "1s" },
-                  { icon: Sun, title: "Sun-Drying", desc: "Natural drying under sunlight", delay: "1.5s" },
-                  { icon: Zap, title: "Popping", desc: "Traditional popping technique", delay: "2s" },
-                  { icon: Filter, title: "Sorting", desc: "Quality selection process", delay: "2.5s" },
-                  { icon: Sparkles, title: "Polishing", desc: "Perfect finish and texture", delay: "3s" },
-                  { icon: Leaf, title: "Flavoring", desc: "Natural signature flavors added", delay: "3.5s" }
-                ].map((step, index) => {
-                  const IconComponent = step.icon;
-                  return (
+                  { image: harvestingImage, title: "Harvesting", desc: "Fresh lotus plants from pristine waters", delay: "0s" },
+                  { image: collectingImage, title: "Collecting", desc: "Precious seeds carefully gathered", delay: "0.5s" },
+                  { image: cleaningImage, title: "Cleaning", desc: "Thorough washing and preparation", delay: "1s" },
+                  { image: dryingImage, title: "Sun-Drying", desc: "Natural drying under sunlight", delay: "1.5s" },
+                  { image: poppingImage, title: "Popping", desc: "Traditional popping technique", delay: "2s" },
+                  { image: sortingImage, title: "Sorting", desc: "Quality selection process", delay: "2.5s" },
+                  { image: polishingImage, title: "Polishing", desc: "Perfect finish and texture", delay: "3s" },
+                  { image: flavoringImage, title: "Flavoring", desc: "Natural signature flavors added", delay: "3.5s" }
+                ].map((step, index) => (
                   <div 
                     key={index}
                     className={`relative flex flex-col items-center text-center space-y-3 p-4 rounded-xl bg-background/50 border border-border/50 animate-fade-in group hover:scale-105 transition-transform duration-300 ${index >= 4 ? 'md:col-span-1' : ''}`}
@@ -120,9 +128,13 @@ const WhatIsMakhana = () => {
                       {index + 1}
                     </div>
                     
-                    {/* Icon with animation */}
-                    <div className="text-primary group-hover:animate-bounce" style={{ animationDelay: step.delay }}>
-                      <IconComponent size={32} />
+                    {/* Image with animation */}
+                    <div className="w-16 h-16 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-md" style={{ animationDelay: step.delay }}>
+                      <img 
+                        src={step.image} 
+                        alt={step.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     
                     {/* Title and description */}
@@ -145,8 +157,7 @@ const WhatIsMakhana = () => {
                       </div>
                     )}
                   </div>
-                  );
-                })}
+                ))}
               </div>
               
               {/* Flowing particles animation */}

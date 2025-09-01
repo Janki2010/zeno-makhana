@@ -23,7 +23,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-foreground text-background py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <span className="text-xl font-bold">Zeno</span>

@@ -43,28 +43,6 @@ const CallToAction = () => {
                   Contact Us
                 </Button>
               </div>
-
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap justify-center gap-8 pt-8 text-muted-foreground text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-1 bg-white rounded-full" />
-                  </div>
-                  <span>SSL Secure Payment</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-1 bg-white rounded-full" />
-                  </div>
-                  <span>24/7 Customer Service</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-purple-500 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-1 bg-white rounded-full" />
-                  </div>
-                  <span>Fast Delivery</span>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </div>

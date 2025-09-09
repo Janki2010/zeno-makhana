@@ -8,7 +8,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/1253bd5d-37ed-47d2-9377-3343db34fef0.png" 
+              src="/lovable-uploads/b151d2ea-7044-482f-a759-3fd9177e0404.png" 
               alt="Zeno Logo" 
               className="h-8 w-auto"
             />

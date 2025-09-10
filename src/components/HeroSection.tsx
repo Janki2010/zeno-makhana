@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import personEnjoyingMakhana from "@/assets/person-enjoying-makhana.jpg";
-import authenticMakhanaHero from "@/assets/authentic-makhana-hero.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
@@ -79,30 +77,14 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Right Images */}
-          <div className="relative space-y-6">
+          {/* Right Brand Image */}
+          <div className="relative">
             <div className="relative z-10 animate-float">
               <img 
-                src={personEnjoyingMakhana}
-                alt="Happy person enjoying delicious flavored Makhana - the perfect healthy snack" 
+                src="/lovable-uploads/04f49a39-2dd5-40d2-bec9-aca8322ba21a.png"
+                alt="Zeno Makhana product range - Premium flavored healthy snacks with multiple varieties" 
                 className="w-full h-auto rounded-3xl shadow-strong hover:scale-105 transition-transform duration-500"
               />
-            </div>
-            
-            {/* Second Hero Image */}
-            <div className="relative z-10 animate-float" style={{ animationDelay: '0.3s' }}>
-              <img 
-                src={authenticMakhanaHero}
-                alt="Authentic white puffy Makhana seeds showing real fox nuts texture - natural lotus seed snack" 
-                className="w-full h-48 object-cover rounded-2xl shadow-elegant hover:scale-105 transition-transform duration-500 border border-white/20"
-              />
-              
-              {/* Overlay text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
-              <div className="absolute bottom-4 left-4 text-white">
-                <div className="text-sm font-medium opacity-90">{t('hero.premium_quality')}</div>
-                <div className="text-xs opacity-70">{t('hero.artisan_crafted')}</div>
-              </div>
             </div>
             
             {/* Decorative Elements */}

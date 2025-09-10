@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import personEnjoyingMakhana from "@/assets/person-enjoying-makhana.jpg";
 import authenticMakhanaHero from "@/assets/authentic-makhana-hero.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
       {/* Background Pattern */}
@@ -17,30 +20,29 @@ const HeroSection = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white/90 text-sm">
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse-soft" />
-                <span>Natural • Healthy • Delicious</span>
+                <span>{t('hero.badge')}</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Taste
-                <span className="block text-white/90">Nature's</span>
+                {t('hero.title_1')}
+                <span className="block text-white/90">{t('hero.title_2')}</span>
                 <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                  Perfection
+                  {t('hero.title_3')}
                 </span>
               </h1>
               
               <p className="text-lg lg:text-xl text-white/90 max-w-2xl">
-                Discover our flavoured Makhana - the perfect healthy snack from nature's own pharmacy. 
-                Rich in nutrients and amazing in taste.
+                {t('hero.description')}
               </p>
             </div>
             
             {/* Dynamic Stats Bar */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
               {[
-                { number: "100%", label: "Natural", icon: "🌱" },
-                { number: "20g", label: "Protein", icon: "💪" },
-                { number: "5+", label: "Flavors", icon: "🎨" },
-                { number: "89", label: "Calories", icon: "⚡" }
+                { number: "100%", label: t('hero.stat_natural'), icon: "🌱" },
+                { number: "20g", label: t('hero.stat_protein'), icon: "💪" },
+                { number: "5+", label: t('hero.stat_flavors'), icon: "🎨" },
+                { number: "89", label: t('hero.stat_calories'), icon: "⚡" }
               ].map((stat, index) => (
                 <div key={index} className="text-center space-y-2">
                   <div className="text-2xl animate-bounce" style={{ animationDelay: `${index * 0.2}s` }}>
@@ -98,8 +100,8 @@ const HeroSection = () => {
               {/* Overlay text */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
               <div className="absolute bottom-4 left-4 text-white">
-                <div className="text-sm font-medium opacity-90">Premium Quality</div>
-                <div className="text-xs opacity-70">Artisan Crafted Flavors</div>
+                <div className="text-sm font-medium opacity-90">{t('hero.premium_quality')}</div>
+                <div className="text-xs opacity-70">{t('hero.artisan_crafted')}</div>
               </div>
             </div>
             
@@ -118,7 +120,7 @@ const HeroSection = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-xs font-medium">SCROLL</span>
+          <span className="text-xs font-medium">{t('hero.scroll')}</span>
           <div className="w-0.5 h-8 bg-white/30 rounded-full relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-2 bg-white/60 rounded-full animate-pulse-soft" />
           </div>

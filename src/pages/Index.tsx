@@ -7,8 +7,11 @@ import ProductShowcase from "@/components/ProductShowcase";
 import HealthBenefits from "@/components/HealthBenefits";
 import CallToAction from "@/components/CallToAction";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -29,8 +32,7 @@ const Index = () => {
                 <span className="text-xl font-bold">Zeno</span>
               </div>
               <p className="text-background/70 text-sm">
-                Leading provider of premium Makhana. 
-                World-class natural snacking.
+                {t('footer.description')}
               </p>
               
               {/* Social Media Icons */}
@@ -52,29 +54,29 @@ const Index = () => {
             
             
             <div className="space-y-4">
-              <h3 className="font-semibold">Products</h3>
+              <h3 className="font-semibold">{t('footer.products')}</h3>
               <div className="space-y-2 text-sm text-background/70">
-                <div>Cheddar Cheese Makhana</div>
-                <div>Cream & Onion Makhana</div>
-                <div>Salt & Pepper Makhana</div>
-                <div>Sweet Chilli Makhana</div>
-                <div>Piri Piri Makhana</div>
+                <div>{t('footer.product_cheddar')}</div>
+                <div>{t('footer.product_cream_onion')}</div>
+                <div>{t('footer.product_salt_pepper')}</div>
+                <div>{t('footer.product_sweet_chilli')}</div>
+                <div>{t('footer.product_piri_piri')}</div>
               </div>
             </div>
             
             
             <div className="space-y-4">
-              <h3 className="font-semibold">Contact</h3>
+              <h3 className="font-semibold">{t('footer.contact')}</h3>
               <div className="space-y-2 text-sm text-background/70">
-                <div>hello@lotusseeds.com</div>
-                <div>+1 (555) 123-4567</div>
-                <div>New York, USA</div>
+                <div>info@zeno.com</div>
+                <div>+45 12345678</div>
+                <div>Copenhagen, Denmark</div>
               </div>
             </div>
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
-            © 2025 Zeno. All rights reserved.
+            {t('footer.copyright')}
           </div>
         </div>
       </footer>

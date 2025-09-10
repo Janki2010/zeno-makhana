@@ -1,4 +1,5 @@
 import { Flower2, Sun, Zap, Leaf } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import process images
 import harvestingImage from "@/assets/process-harvesting.jpg";
@@ -11,6 +12,8 @@ import polishingImage from "@/assets/process-polishing.jpg";
 import flavoringImage from "@/assets/process-flavoring.jpg";
 
 const WhatIsMakhana = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -19,13 +22,13 @@ const WhatIsMakhana = () => {
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 text-primary text-sm font-medium">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse-soft" />
-              <span>Discover</span>
+              <span>{t('makhana.discover')}</span>
             </div>
             
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground leading-tight">
-              What is
+              {t('makhana.title')}
               <span className="block bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                Makhana?
+                {t('makhana.title_highlight')}
               </span>
             </h2>
           </div>
@@ -33,26 +36,24 @@ const WhatIsMakhana = () => {
           {/* Content */}
           <div className="space-y-6 text-lg text-muted-foreground max-w-3xl mx-auto">
             <p>
-              Makhana is made from the seeds of the Euryale ferox plant, which grows in water bodies like ponds.
+              {t('makhana.description_1')}
             </p>
             
             
             <p>
-              These seeds are also known as Lotus seeds, Euryale Ferox, fox nuts or gorgon nut.
+              {t('makhana.description_2')}
             </p>
             
             <p>
-              They are harvested, sun-dried and popped — kind of like popcorn, but crunchier and much healthier.
+              {t('makhana.description_3')}
             </p>
             
             <p className="text-foreground font-medium">
-              At Zeno, we roast them and add exciting natural flavours to create the perfect and healthy snack.
+              {t('makhana.description_4')}
             </p>
             
             <p>
-              Our makhana goes through a meticulous 8-step traditional process: from harvesting lotus plants in pristine water bodies, 
-              collecting the precious seeds, careful cleaning and sun-drying, to the art of popping, sorting, polishing, and finally 
-              adding our signature natural flavors. Each step is crafted to preserve the nutritional value while creating the perfect crunch.
+              {t('makhana.description_5')}
             </p>
           </div>
 
@@ -94,30 +95,30 @@ const WhatIsMakhana = () => {
           </div>
           
           <div className="flex justify-center gap-6 text-sm text-muted-foreground font-medium">
-            <span>Harvest</span>
-            <span>Sun-Dry</span>
-            <span>Roast</span>
-            <span>Flavor</span>
+            <span>{t('makhana.process_harvest')}</span>
+            <span>{t('makhana.process_sundry')}</span>
+            <span>{t('makhana.process_roast')}</span>
+            <span>{t('makhana.process_flavor')}</span>
           </div>
 
           {/* Animated Process Flow */}
           <div className="mt-16 space-y-8">
             <h3 className="text-2xl font-bold text-foreground">
-              From Farm to Flavor: The Complete Process
+              {t('makhana.process_title')}
             </h3>
             
-            <div className="bg-card rounded-2xl p-8 shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                {[
-                  { image: harvestingImage, title: "Harvesting", desc: "Fresh lotus plants from pristine waters", delay: "0s" },
-                  { image: collectingImage, title: "Collecting", desc: "Precious seeds carefully gathered", delay: "0.5s" },
-                  { image: cleaningImage, title: "Cleaning", desc: "Thorough washing and preparation", delay: "1s" },
-                  { image: dryingImage, title: "Sun-Drying", desc: "Natural drying under sunlight", delay: "1.5s" },
-                  { image: poppingImage, title: "Popping", desc: "Traditional popping technique", delay: "2s" },
-                  { image: sortingImage, title: "Sorting", desc: "Quality selection process", delay: "2.5s" },
-                  { image: polishingImage, title: "Polishing", desc: "Perfect finish and texture", delay: "3s" },
-                  { image: flavoringImage, title: "Flavoring", desc: "Natural signature flavors added", delay: "3.5s" }
-                ].map((step, index) => (
+              <div className="bg-card rounded-2xl p-8 shadow-lg overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                  {[
+                    { image: harvestingImage, title: t('makhana.step_harvesting'), desc: t('makhana.desc_harvesting'), delay: "0s" },
+                    { image: collectingImage, title: t('makhana.step_collecting'), desc: t('makhana.desc_collecting'), delay: "0.5s" },
+                    { image: cleaningImage, title: t('makhana.step_cleaning'), desc: t('makhana.desc_cleaning'), delay: "1s" },
+                    { image: dryingImage, title: t('makhana.step_drying'), desc: t('makhana.desc_drying'), delay: "1.5s" },
+                    { image: poppingImage, title: t('makhana.step_popping'), desc: t('makhana.desc_popping'), delay: "2s" },
+                    { image: sortingImage, title: t('makhana.step_sorting'), desc: t('makhana.desc_sorting'), delay: "2.5s" },
+                    { image: polishingImage, title: t('makhana.step_polishing'), desc: t('makhana.desc_polishing'), delay: "3s" },
+                    { image: flavoringImage, title: t('makhana.step_flavoring'), desc: t('makhana.desc_flavoring'), delay: "3.5s" }
+                  ].map((step, index) => (
                   <div 
                     key={index}
                     className={`relative flex flex-col items-center text-center space-y-3 p-4 rounded-xl bg-background/50 border border-border/50 animate-fade-in group hover:scale-105 transition-transform duration-300 ${index >= 4 ? 'md:col-span-1' : ''}`}

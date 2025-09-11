@@ -41,11 +41,8 @@ const HeroSection = () => {
                 <span>{t('hero.badge')}</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                <span className="inline-flex items-baseline gap-3">
-                  {t('hero.title_1')} 
-                  <span className="text-2xl lg:text-4xl font-medium text-white/80">Zeno</span>
-                </span>
+              <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
+                <span className="block">Zeno - {t('hero.title_1')}</span>
                 <span className="block text-white/90">{t('hero.title_2')}</span>
                 <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                   {t('hero.title_3')}

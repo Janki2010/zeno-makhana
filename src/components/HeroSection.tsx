@@ -12,9 +12,29 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-4 z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8">
+        <div className="flex flex-col items-center space-y-12">
+          {/* Brand Image Section */}
+          <div className="relative w-full max-w-4xl">
+            <div className="relative z-10 animate-float">
+              <img 
+                src="/lovable-uploads/04f49a39-2dd5-40d2-bec9-aca8322ba21a.png"
+                alt="Zeno Makhana product range - Premium flavored healthy snacks with multiple varieties" 
+                className="w-full h-auto rounded-3xl shadow-strong hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse-soft" />
+            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse-soft" />
+            
+            {/* Floating makhana elements */}
+            <div className="absolute top-4 right-4 text-2xl animate-bounce opacity-80" style={{ animationDelay: '0.5s' }}>🤍</div>
+            <div className="absolute bottom-8 right-8 text-xl animate-bounce opacity-60" style={{ animationDelay: '1s' }}>🤍</div>
+            <div className="absolute top-1/2 -left-4 text-lg animate-bounce opacity-70" style={{ animationDelay: '1.5s' }}>🤍</div>
+          </div>
+
+          {/* Content Section */}
+          <div className="text-center space-y-8 max-w-4xl">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white/90 text-sm">
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse-soft" />
@@ -29,13 +49,13 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-white/90 max-w-2xl">
+              <p className="text-lg lg:text-xl text-white/90 max-w-2xl mx-auto">
                 {t('hero.description')}
               </p>
             </div>
             
             {/* Dynamic Stats Bar */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
               {[
                 { number: "100%", label: t('hero.stat_natural'), icon: "🌱" },
                 { number: "20g", label: t('hero.stat_protein'), icon: "💪" },
@@ -57,7 +77,7 @@ const HeroSection = () => {
             </div>
             
             {/* Health Benefits Bar */}
-            <div className="flex flex-wrap gap-6 text-white/80 text-sm font-medium">
+            <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm font-medium">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/60 rounded-full" />
                 <span>VEGAN</span>
@@ -75,26 +95,6 @@ const HeroSection = () => {
                 <span>NATURAL</span>
               </div>
             </div>
-          </div>
-          
-          {/* Right Brand Image */}
-          <div className="relative">
-            <div className="relative z-10 animate-float">
-              <img 
-                src="/lovable-uploads/04f49a39-2dd5-40d2-bec9-aca8322ba21a.png"
-                alt="Zeno Makhana product range - Premium flavored healthy snacks with multiple varieties" 
-                className="w-full h-auto rounded-3xl shadow-strong hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            
-            {/* Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse-soft" />
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse-soft" />
-            
-            {/* Floating makhana elements */}
-            <div className="absolute top-4 right-4 text-2xl animate-bounce opacity-80" style={{ animationDelay: '0.5s' }}>🤍</div>
-            <div className="absolute bottom-8 right-8 text-xl animate-bounce opacity-60" style={{ animationDelay: '1s' }}>🤍</div>
-            <div className="absolute top-1/2 -left-4 text-lg animate-bounce opacity-70" style={{ animationDelay: '1.5s' }}>🤍</div>
           </div>
         </div>
       </div>

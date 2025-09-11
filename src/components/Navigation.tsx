@@ -18,20 +18,20 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/b151d2ea-7044-482f-a759-3fd9177e0404.png" 
               alt="Zeno Logo" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
+            <a href="/#seeds-to-snack" className="text-foreground hover:text-primary transition-colors">
+              {t('nav.seeds_to_snack')}
+            </a>
             <a href="/#flavours" className="text-foreground hover:text-primary transition-colors">
               {t('nav.flavours')}
             </a>
             <a href="/#webshop" className="text-foreground hover:text-primary transition-colors">
               {t('nav.webshop')}
-            </a>
-            <a href="/#seeds-to-snack" className="text-foreground hover:text-primary transition-colors">
-              {t('nav.seeds_to_snack')}
             </a>
             <a href="/about" className="text-foreground hover:text-primary transition-colors">
               {t('nav.about_us')}

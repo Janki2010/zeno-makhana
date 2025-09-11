@@ -27,8 +27,8 @@ const Navigation = () => {
             <a href="/#seeds-to-snack" className="text-foreground hover:text-primary transition-colors">
               {t('nav.seeds_to_snack')}
             </a>
-            <a href="/#flavours" className="text-foreground hover:text-primary transition-colors">
-              {t('nav.flavours')}
+            <a href="/#flavors" className="text-foreground hover:text-primary transition-colors">
+              Flavors
             </a>
             <a href="/#webshop" className="text-foreground hover:text-primary transition-colors">
               {t('nav.webshop')}

@@ -55,7 +55,7 @@ const HeroSection = () => {
               {[
                 { number: "100%", label: t('hero.stat_natural'), icon: "🌱" },
                 { number: "20g", label: t('hero.stat_protein'), icon: "💪" },
-                { number: "5", label: t('hero.stat_flavors'), icon: "🍯" },
+                { number: "5", label: t('hero.stat_flavors'), icon: "🍿" },
                 { number: "89", label: t('hero.stat_calories'), icon: "⚡" }
               ].map((stat, index) => (
                 <div key={index} className="text-center space-y-2">

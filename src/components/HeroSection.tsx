@@ -42,11 +42,7 @@ const HeroSection = () => {
               </div>
               
               <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
-                <span className="block">Zeno - {t('hero.title_1')}</span>
-                <span className="block text-white/90">{t('hero.title_2')}</span>
-                <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                  {t('hero.title_3')}
-                </span>
+                Zeno - {t('hero.title_1')} {t('hero.title_2')} {t('hero.title_3')}
               </h1>
               
               <p className="text-lg lg:text-xl text-white/90 max-w-2xl mx-auto">

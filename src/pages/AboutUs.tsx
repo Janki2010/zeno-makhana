@@ -17,7 +17,7 @@ const AboutUs = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-background/20 backdrop-blur-sm rounded-full px-4 py-2 text-primary-foreground text-sm font-medium">
+            <div className="inline-flex items-center gap-2 bg-background/20 rounded-full px-4 py-2 text-primary-foreground text-sm font-medium">
               <div className="w-2 h-2 bg-background rounded-full animate-pulse-soft" />
               <span>About Zeno</span>
             </div>

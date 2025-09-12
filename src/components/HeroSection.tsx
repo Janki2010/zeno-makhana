@@ -5,21 +5,21 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center gradient-hero">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px]" />
       </div>
       
-      <div className="container mx-auto px-4 z-10">
-        <div className="flex flex-col items-center space-y-12">
+      <div className="container mx-auto px-4 py-8 z-10">
+        <div className="flex flex-col items-center space-y-8 lg:space-y-12">
           {/* Brand Image Section */}
-          <div className="relative w-full max-w-4xl">
+          <div className="relative w-full max-w-3xl lg:max-w-4xl">
             <div className="relative z-10 animate-float">
               <img 
                 src="/lovable-uploads/04f49a39-2dd5-40d2-bec9-aca8322ba21a.png"
                 alt="Zeno Makhana product range - Premium flavored healthy snacks with multiple varieties" 
-                className="w-full h-auto rounded-3xl shadow-strong hover:scale-105 transition-transform duration-500"
+                className="w-full h-auto rounded-2xl lg:rounded-3xl shadow-strong hover:scale-[1.02] transition-transform duration-500 object-contain"
               />
             </div>
             

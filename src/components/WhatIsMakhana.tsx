@@ -8,8 +8,10 @@ import cleaningImage from "@/assets/process-cleaning.jpg";
 import dryingImage from "@/assets/process-drying.jpg";
 import poppingImage from "@/assets/process-popping.jpg";
 import sortingImage from "@/assets/process-sorting.jpg";
-import polishingImage from "@/assets/process-polishing.jpg";
 import flavoringImage from "@/assets/process-flavoring.jpg";
+
+// Import packaging image
+const packagingImage = "/lovable-uploads/f6bf713e-3096-4527-b0af-a64b83d79dac.png";
 
 const WhatIsMakhana = () => {
   const { t } = useLanguage();
@@ -52,15 +54,15 @@ const WhatIsMakhana = () => {
       step: "06"
     },
     { 
-      image: polishingImage, 
-      title: t('makhana.step_polishing'), 
-      desc: t('makhana.desc_polishing'), 
-      step: "07"
-    },
-    { 
       image: flavoringImage, 
       title: t('makhana.step_flavoring'), 
       desc: t('makhana.desc_flavoring'), 
+      step: "07"
+    },
+    { 
+      image: packagingImage, 
+      title: "Packaging", 
+      desc: "Finally, the flavored makhana is carefully packaged in attractive, airtight pouches to maintain freshness and quality. Each package is sealed to preserve the crunch and flavor, ready to deliver the perfect guilt-free snacking experience.", 
       step: "08"
     }
   ];
@@ -75,7 +77,7 @@ const WhatIsMakhana = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Makhana is made from the seeds of the Euryale ferox plant, commonly known as fox nuts or lotus seeds. 
-            This aquatic plant thrives in the pristine water bodies of Bihar, India, including ponds, lakes, and wetlands. 
+            This aquatic plant thrives in pristine water bodies including ponds, lakes, and wetlands. 
             Our traditional 8-step process transforms these nutritious seeds into the perfect healthy snack you love.
           </p>
         </div>

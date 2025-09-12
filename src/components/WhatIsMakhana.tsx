@@ -74,7 +74,9 @@ const WhatIsMakhana = () => {
             Zeno Makhana - From Seeds to Snack
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('makhana.description_1')}
+            Makhana is made from the seeds of the Euryale ferox plant, commonly known as fox nuts or lotus seeds. 
+            This aquatic plant thrives in the pristine water bodies of Bihar, India, including ponds, lakes, and wetlands. 
+            Our traditional 8-step process transforms these nutritious seeds into the perfect healthy snack you love.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center gradient-hero pt-24 md:pt-28">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px]" />

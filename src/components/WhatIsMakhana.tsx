@@ -14,150 +14,156 @@ import flavoringImage from "@/assets/process-flavoring.jpg";
 const WhatIsMakhana = () => {
   const { t } = useLanguage();
 
+  const processSteps = [
+    { 
+      image: harvestingImage, 
+      title: t('makhana.step_harvesting'), 
+      desc: t('makhana.desc_harvesting'), 
+      step: "01"
+    },
+    { 
+      image: collectingImage, 
+      title: t('makhana.step_collecting'), 
+      desc: t('makhana.desc_collecting'), 
+      step: "02"
+    },
+    { 
+      image: cleaningImage, 
+      title: t('makhana.step_cleaning'), 
+      desc: t('makhana.desc_cleaning'), 
+      step: "03"
+    },
+    { 
+      image: dryingImage, 
+      title: t('makhana.step_drying'), 
+      desc: t('makhana.desc_drying'), 
+      step: "04"
+    },
+    { 
+      image: poppingImage, 
+      title: t('makhana.step_popping'), 
+      desc: t('makhana.desc_popping'), 
+      step: "05"
+    },
+    { 
+      image: sortingImage, 
+      title: t('makhana.step_sorting'), 
+      desc: t('makhana.desc_sorting'), 
+      step: "06"
+    },
+    { 
+      image: polishingImage, 
+      title: t('makhana.step_polishing'), 
+      desc: t('makhana.desc_polishing'), 
+      step: "07"
+    },
+    { 
+      image: flavoringImage, 
+      title: t('makhana.step_flavoring'), 
+      desc: t('makhana.desc_flavoring'), 
+      step: "08"
+    }
+  ];
+
   return (
-    <section className="py-16 lg:py-20 bg-background">
+    <section id="seeds-to-snack" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Header */}
-          <div className="space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground leading-tight">
-              Zeno Makhana - From Seeds to Snack
-            </h2>
-          </div>
+        {/* Header */}
+        <div className="text-center space-y-6 mb-20">
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground leading-tight">
+            Zeno Makhana - From Seeds to Snack
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            {t('makhana.description_1')}
+          </p>
+        </div>
 
-          {/* Content */}
-          <div className="space-y-6 text-lg text-muted-foreground max-w-3xl mx-auto">
-            <p>
-              {t('makhana.description_1')}
-            </p>
+        {/* Process Steps - Alternating Layout */}
+        <div className="space-y-24 lg:space-y-32">
+          {processSteps.map((step, index) => {
+            const isEven = index % 2 === 0;
             
-            
-            <p>
-              {t('makhana.description_2')}
-            </p>
-            
-            <p>
-              {t('makhana.description_3')}
-            </p>
-            
-            <p className="text-foreground font-medium">
-              {t('makhana.description_4')}
-            </p>
-            
-            <p>
-              {t('makhana.description_5')}
-            </p>
-          </div>
+            return (
+              <div 
+                key={index}
+                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ${
+                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } animate-fade-in`}
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {/* Image Section */}
+                <div className="flex-1 relative group">
+                  <div className="relative overflow-hidden rounded-3xl shadow-strong">
+                    <img 
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    
+                    {/* Step Number Overlay */}
+                    <div className="absolute top-6 left-6 w-16 h-16 bg-primary/90 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                      <span className="text-primary-foreground font-bold text-lg">{step.step}</span>
+                    </div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  
+                  {/* Decorative Elements */}
+                  <div className={`absolute -z-10 top-8 ${isEven ? '-right-8' : '-left-8'} w-32 h-32 bg-primary/10 rounded-full blur-2xl`} />
+                  <div className={`absolute -z-10 -bottom-8 ${isEven ? '-left-8' : '-right-8'} w-24 h-24 bg-secondary/10 rounded-full blur-xl`} />
+                </div>
 
-          {/* Popping Makhana Animation */}
-          <div className="relative py-12">
-            {/* Animated makhana seeds popping */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`absolute animate-bounce text-2xl opacity-70`}
-                  style={{
-                    left: `${15 + i * 10}%`,
-                    top: `${20 + (i % 3) * 20}%`,
-                    animationDelay: `${i * 0.3}s`,
-                    animationDuration: `${2 + (i % 2)}s`
-                  }}
-                >
-                  🤍
+                {/* Content Section */}
+                <div className="flex-1 space-y-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-0.5 bg-primary rounded-full" />
+                      <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                        Step {step.step}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
+                      {step.title}
+                    </h3>
+                    
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                  
+                  {/* Process Icon */}
+                  <div className="flex items-center gap-3 pt-4">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse-soft" />
+                    <span className="text-sm text-muted-foreground font-medium">
+                      {index < processSteps.length - 1 ? 'Next: ' + processSteps[index + 1].title : 'Ready to enjoy!'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Final Summary */}
+        <div className="mt-24 text-center space-y-8">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+              The Perfect Healthy Snack
+            </h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: "🌱", label: "100% Natural" },
+                { icon: "💪", label: "High Protein" },
+                { icon: "⚡", label: "Low Calorie" },
+                { icon: "🍿", label: "5 Flavors" }
+              ].map((benefit, index) => (
+                <div key={index} className="bg-card rounded-2xl p-6 shadow-soft animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="text-3xl mb-2">{benefit.icon}</div>
+                  <div className="text-sm font-semibold text-foreground">{benefit.label}</div>
                 </div>
               ))}
-            </div>
-            
-            {/* Process visualization */}
-            <div className="relative z-10 flex justify-center items-center gap-8">
-              <div className="text-primary animate-pulse-soft"><Flower2 size={36} /></div>
-              <div className="w-8 h-0.5 bg-primary/30"></div>
-              <div className="text-primary animate-bounce" style={{ animationDelay: '0.5s' }}><Sun size={36} /></div>
-              <div className="w-8 h-0.5 bg-primary/30"></div>
-              <div className="text-primary animate-pulse-soft" style={{ animationDelay: '1s' }}><Zap size={36} /></div>
-              <div className="w-8 h-0.5 bg-primary/30"></div>
-              <div className="text-primary animate-bounce" style={{ animationDelay: '1.5s' }}><Leaf size={36} /></div>
-            </div>
-            
-            {/* Popping effect center */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="text-primary animate-scale-bounce opacity-80"><Zap size={60} /></div>
-            </div>
-          </div>
-          
-          <div className="flex justify-center gap-6 text-sm text-muted-foreground font-medium">
-            <span>{t('makhana.process_harvest')}</span>
-            <span>{t('makhana.process_sundry')}</span>
-            <span>{t('makhana.process_roast')}</span>
-            <span>{t('makhana.process_flavor')}</span>
-          </div>
-
-          {/* Animated Process Flow */}
-          <div className="mt-16 space-y-8">
-            <h3 className="text-2xl font-bold text-foreground">
-              {t('makhana.process_title')}
-            </h3>
-            
-              <div className="bg-card rounded-2xl p-8 shadow-lg overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                  {[
-                    { image: harvestingImage, title: t('makhana.step_harvesting'), desc: t('makhana.desc_harvesting'), delay: "0s" },
-                    { image: collectingImage, title: t('makhana.step_collecting'), desc: t('makhana.desc_collecting'), delay: "0.5s" },
-                    { image: cleaningImage, title: t('makhana.step_cleaning'), desc: t('makhana.desc_cleaning'), delay: "1s" },
-                    { image: dryingImage, title: t('makhana.step_drying'), desc: t('makhana.desc_drying'), delay: "1.5s" },
-                    { image: poppingImage, title: t('makhana.step_popping'), desc: t('makhana.desc_popping'), delay: "2s" },
-                    { image: sortingImage, title: t('makhana.step_sorting'), desc: t('makhana.desc_sorting'), delay: "2.5s" },
-                    { image: polishingImage, title: t('makhana.step_polishing'), desc: t('makhana.desc_polishing'), delay: "3s" },
-                    { image: flavoringImage, title: t('makhana.step_flavoring'), desc: t('makhana.desc_flavoring'), delay: "3.5s" }
-                  ].map((step, index) => (
-                  <div 
-                    key={index}
-                    className={`relative flex flex-col items-center text-center space-y-3 p-4 rounded-xl bg-background/50 border border-border/50 animate-fade-in group hover:scale-105 transition-transform duration-300 ${index >= 4 ? 'md:col-span-1' : ''}`}
-                    style={{ animationDelay: step.delay }}
-                  >
-                    {/* Step number */}
-                    <div className="absolute -top-2 -left-2 w-6 h-6 bg-primary text-primary-foreground rounded-full text-xs flex items-center justify-center font-bold animate-pulse-soft" style={{ animationDelay: step.delay }}>
-                      {index + 1}
-                    </div>
-                    
-                    {/* Image with animation */}
-                    <div className="w-16 h-16 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-md" style={{ animationDelay: step.delay }}>
-                      <img 
-                        src={step.image} 
-                        alt={step.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    
-                    {/* Title and description */}
-                    <div className="space-y-1">
-                      <h4 className="font-semibold text-foreground text-sm">{step.title}</h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
-                    </div>
-                    
-                    {/* Connecting arrow (except for last item) */}
-                    {index < 7 && (
-                      <div className="hidden md:block absolute -right-8 top-1/2 transform -translate-y-1/2 text-primary/50 animate-pulse-soft" style={{ animationDelay: `${parseFloat(step.delay) + 0.2}s` }}>
-                        →
-                      </div>
-                    )}
-                    
-                    {/* Mobile connecting arrow (vertical) */}
-                    {index < 7 && (
-                      <div className="md:hidden absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-primary/50 rotate-90 animate-pulse-soft" style={{ animationDelay: `${parseFloat(step.delay) + 0.2}s` }}>
-                        →
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              
-              {/* Flowing particles animation */}
-              <div className="relative mt-8 h-2 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 rounded-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse-soft opacity-60"></div>
-                <div className="absolute top-0 left-0 h-full w-1/4 bg-gradient-to-r from-primary/50 to-transparent animate-[slide-in-right_4s_ease-in-out_infinite]"></div>
-              </div>
             </div>
           </div>
         </div>

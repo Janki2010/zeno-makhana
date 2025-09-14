@@ -98,16 +98,12 @@ const WhatIsMakhana = () => {
                 {/* Image Section */}
                 <div className="flex-1 relative group">
                   <div className="relative overflow-hidden rounded-3xl shadow-strong">
-                    <img 
-                      src={step.image}
-                      alt={step.title}
-                      className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                     <img 
+                       src={step.image}
+                       alt={step.title}
+                       className={`w-full h-80 lg:h-96 ${step.step === "08" ? "object-contain bg-white" : "object-cover"} group-hover:scale-105 transition-transform duration-700`}
+                     />
                     
-                    {/* Step Number Overlay */}
-                    <div className="absolute top-6 left-6 w-16 h-16 bg-primary/90 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-lg">{step.step}</span>
-                    </div>
                     
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

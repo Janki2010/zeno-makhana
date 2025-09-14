@@ -50,27 +50,6 @@ const HeroSection = () => {
               </p>
             </div>
             
-            {/* Dynamic Stats Bar */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-              {[
-                { number: "100%", label: t('hero.stat_natural'), icon: "🌱" },
-                { number: "20g", label: t('hero.stat_protein'), icon: "💪" },
-                { number: "5", label: t('hero.stat_flavors'), icon: "🍿" },
-                { number: "89", label: t('hero.stat_calories'), icon: "⚡" }
-              ].map((stat, index) => (
-                <div key={index} className="text-center space-y-2">
-                  <div className="text-2xl animate-bounce" style={{ animationDelay: `${index * 0.2}s` }}>
-                    {stat.icon}
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white animate-fade-in" style={{ animationDelay: `${index * 0.3}s` }}>
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-white/80 font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
             
             {/* Health Benefits Bar */}
             <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm font-medium">
@@ -91,16 +70,6 @@ const HeroSection = () => {
                 <span>NATURAL</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-xs font-medium">{t('hero.scroll')}</span>
-          <div className="w-0.5 h-8 bg-white/30 rounded-full relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-2 bg-white/60 rounded-full animate-pulse-soft" />
           </div>
         </div>
       </div>

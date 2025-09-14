@@ -104,21 +104,6 @@ const ProductShowcase = () => {
             </Card>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center space-y-6">
-          <h3 className="text-2xl font-bold text-foreground">
-            Ready to try all flavors?
-          </h3>
-          <p className="text-muted-foreground">
-            Experience the complete Makhana journey with our variety pack
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="accent" size="lg" className="px-8">
-              View Nutrition
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

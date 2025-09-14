@@ -4,7 +4,6 @@ import WhatIsMakhana from "@/components/WhatIsMakhana";
 import WhyZeno from "@/components/WhyZeno";
 import ProductShowcase from "@/components/ProductShowcase";
 import HealthBenefits from "@/components/HealthBenefits";
-import CallToAction from "@/components/CallToAction";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -19,7 +18,6 @@ const Index = () => {
       <WhyZeno />
       <ProductShowcase />
       <HealthBenefits />
-      <CallToAction />
       
       {/* Footer */}
       <footer className="bg-foreground text-background py-16">

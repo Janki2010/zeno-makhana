@@ -141,32 +141,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto space-y-6">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-              Ready to Experience Zeno?
-            </h2>
-            <p className="text-muted-foreground">
-              Join us on our mission to make healthy snacking delicious and accessible to everyone.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Explore Products
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  Get In Touch
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="border-t border-border bg-muted/30">
         <div className="container mx-auto px-4 py-8">

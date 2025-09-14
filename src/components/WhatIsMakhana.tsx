@@ -146,27 +146,6 @@ const WhatIsMakhana = () => {
           })}
         </div>
 
-        {/* Final Summary */}
-        <div className="mt-24 text-center space-y-8">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-              The Perfect Healthy Snack
-            </h3>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: "🌱", label: "100% Natural" },
-                { icon: "💪", label: "High Protein" },
-                { icon: "⚡", label: "Low Calorie" },
-                { icon: "🍿", label: "5 Flavors" }
-              ].map((benefit, index) => (
-                <div key={index} className="bg-card rounded-2xl p-6 shadow-soft animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="text-3xl mb-2">{benefit.icon}</div>
-                  <div className="text-sm font-semibold text-foreground">{benefit.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

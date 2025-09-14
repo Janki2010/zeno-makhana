@@ -101,7 +101,7 @@ const WhatIsMakhana = () => {
                      <img 
                        src={step.image}
                        alt={step.title}
-                       className={`w-full h-80 lg:h-96 ${step.step === "08" ? "object-contain bg-white" : "object-cover"} group-hover:scale-105 transition-transform duration-700`}
+                       className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
                      />
                     
                     

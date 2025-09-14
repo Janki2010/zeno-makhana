@@ -11,7 +11,7 @@ import sortingImage from "@/assets/process-sorting.jpg";
 import flavoringImage from "@/assets/process-flavoring.jpg";
 
 // Import packaging image
-const packagingImage = "/lovable-uploads/f6bf713e-3096-4527-b0af-a64b83d79dac.png";
+const packagingImage = "/lovable-uploads/packaging-all-flavours.png";
 
 const WhatIsMakhana = () => {
   const { t } = useLanguage();

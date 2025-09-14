@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import OurStory from "@/components/OurStory";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
@@ -37,6 +38,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Story Section */}
+      <OurStory />
 
       {/* Richa's Story */}
       <section className="py-20 bg-background">

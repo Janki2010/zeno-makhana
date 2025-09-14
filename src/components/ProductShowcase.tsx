@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import productImage from "@/assets/product-flavors.jpg";
+import cheddarCheeseImage from "@/assets/cheddar-cheese.png";
+import creamOnionImage from "@/assets/cream-onion.png";
+import saltPepperImage from "@/assets/salt-pepper.png";
+import sweetChilliImage from "@/assets/sweet-chilli.png";
+import piriPiriImage from "@/assets/piri-piri.png";
 
 const ProductShowcase = () => {
   const flavors = [
@@ -10,7 +14,7 @@ const ProductShowcase = () => {
       color: "from-yellow-100 to-orange-50",
       textColor: "text-orange-800",
       popular: true,
-      image: "/lovable-uploads/98059623-96fd-4b2b-985f-6e6668b36901.png",
+      image: cheddarCheeseImage,
     },
     {
       name: "Cream & Onion Makhana",
@@ -18,15 +22,15 @@ const ProductShowcase = () => {
       color: "from-green-100 to-emerald-50",
       textColor: "text-green-800",
       popular: false,
-      image: "/lovable-uploads/a235b583-704d-4bc7-92b6-7a267361743c.png",
+      image: creamOnionImage,
     },
     {
-      name: "Salt & Pepper Makhana",
+      name: "Himalayan Salt & Pepper Makhana",
       description: "Simple yet flavorful combination of sea salt and cracked pepper",
       color: "from-gray-100 to-slate-50",
       textColor: "text-slate-800",
       popular: false,
-      image: "/lovable-uploads/57b49fca-f28c-4dbc-83ed-87a1160ade13.png",
+      image: saltPepperImage,
     },
     {
       name: "Sweet Chilli Makhana",
@@ -34,7 +38,7 @@ const ProductShowcase = () => {
       color: "from-red-100 to-pink-50",
       textColor: "text-red-800",
       popular: false,
-      image: "/lovable-uploads/08e7fd9b-5b1d-4edd-8557-30a79875498d.png",
+      image: sweetChilliImage,
     },
     {
       name: "Piri Piri Makhana",
@@ -42,12 +46,12 @@ const ProductShowcase = () => {
       color: "from-orange-100 to-red-50",
       textColor: "text-red-800",
       popular: false,
-      image: "/lovable-uploads/ee774028-c384-4957-9814-3b9da2925bc9.png",
+      image: piriPiriImage,
     },
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section id="flavors" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">

@@ -83,7 +83,7 @@ const WhatIsMakhana = () => {
         </div>
 
         {/* Process Steps - Alternating Layout */}
-        <div className="space-y-24 lg:space-y-32">
+        <div className="space-y-12 lg:space-y-16">
           {processSteps.map((step, index) => {
             const isEven = index % 2 === 0;
             

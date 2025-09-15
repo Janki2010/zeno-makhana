@@ -30,7 +30,7 @@ const Navigation = () => {
             <a href="/#flavors" className="text-foreground hover:text-primary transition-colors">
               Flavors
             </a>
-            <a href="/#webshop" className="text-foreground hover:text-primary transition-colors">
+            <a href="/webshop" className="text-foreground hover:text-primary transition-colors">
               {t('nav.webshop')}
             </a>
             <a href="/about" className="text-foreground hover:text-primary transition-colors">

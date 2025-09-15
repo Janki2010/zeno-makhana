@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import cheddarCheeseImage from "@/assets/cheddar-cheese.png";
 import creamOnionImage from "@/assets/cream-onion.png";
 import saltPepperImage from "@/assets/salt-pepper.png";
@@ -7,6 +8,7 @@ import sweetChilliImage from "@/assets/sweet-chilli.png";
 import piriPiriImage from "@/assets/piri-piri.png";
 
 const ProductShowcase = () => {
+  const navigate = useNavigate();
   const flavors = [
     {
       name: "Cheddar Cheese Makhana",
@@ -78,7 +80,8 @@ const ProductShowcase = () => {
           {flavors.map((flavor, index) => (
             <Card 
               key={flavor.name} 
-              className="relative overflow-hidden border-0 shadow-soft hover:shadow-medium transition-all duration-300 transform hover:-translate-y-1 bg-background"
+              className="relative overflow-hidden border-0 shadow-soft hover:shadow-medium transition-all duration-300 transform hover:-translate-y-1 bg-background cursor-pointer"
+              onClick={() => navigate('/webshop')}
             >
               {flavor.popular && (
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full z-10">

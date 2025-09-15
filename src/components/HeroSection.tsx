@@ -36,10 +36,6 @@ const HeroSection = () => {
           {/* Content Section */}
           <div className="text-center space-y-8 max-w-4xl">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white/90 text-sm">
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse-soft" />
-                <span>{t('hero.badge')}</span>
-              </div>
               
               <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
                 Zeno - {t('hero.title_1')} {t('hero.title_2')} {t('hero.title_3')}

@@ -58,12 +58,9 @@ const WhyZeno = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-3">{reason.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed">
                     {reason.description}
                   </p>
-                  <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                    {reason.highlight}
-                  </Badge>
                 </div>
               </div>
             </Card>
